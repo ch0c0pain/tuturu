@@ -21,5 +21,11 @@ int main(int argc, char** argv) {
         printf("%s\n", frames[i]);
         usleep(delays[i]);
     }
+
+    for (int i = 0; i < nbFrames; i++) {
+        free(frames[i]);
+    }
+    free(frames);
+    free(delays);
     return 0;
 }
