@@ -1,5 +1,36 @@
 # Tuturu ascii art
 
+                         __________
+                   .ooooTOOOOOOOOOOToo..
+                _./OOOOOOOOOOOOOOOOO****\._
+              ./OOOOOOOOOOOOOOOOOOO********\._
+            ./OOOOOOOOOOOOOOOOOOOOO***********\._
+           /OOOOOOOOOOOOOOOOOOOOOOOO*************\.
+     _____/^^^^^^^^TTTTTPPPVTTTOOOOOO**************\.
+    |*****\OOOOOO/Ooooooo..._____-\p****************L
+  ./*******\OOOO/OOO9/^¨^VOOOOOOOO\-'''''\***********|
+ /********T/\OO|OO/        '^-VOOOOOOOOOO\..\********|
+|********/:/ '\U/   _*##*-    |:7TOOOOOOOOOA..\****.V
+ \******/:/        *.-^^-.   .|:::\OOOOOO^vOOA..\*/
+  \LLLL/::_\      .//a\.'.^. /:::::^PPv/:::\VOVOVOA-.
+      /::|0.|     | Y0/.'./  /::::::::::::::::| \OOOO\
+      |::\./       ^--..-'  /::::::::::::\:::::  \OOOO\
+       .-^                ./::::::::::::::;:::::\ \OOOO\
+       \                 /::./|:::::::::::\:::::\  ^-T-^
+        )              .^.-^ .|::::::::::::^:::::\ 
+        /                    /.^\:::::::::::\:::::\
+        |/^-                /   .^:::./\::::|\::::\ 
+        \\.-^                   /::./::.\:::| \::::\ 
+         )                     /::/\:::|\:::.| \.:::\
+         |                   ./:.^  \:/  Y:::|   \.::\
+         (__                /.-^\    V   \:::|     \.:\
+       ./:::^^^^-----.           \        \:/        \.\
+       /::/\::::::./  \           \        V          ^-.
+      /:/.  \:::./     \           \
+      V^    |:./       .|
+           /./          \
+           V
+
 Animates Mayuri from Steins;gate in terminal, in handmade ascii art, saying her famous "tuturu" catchphrase.
 
 The display is made through ncurses and the sound through pulseaudio.
