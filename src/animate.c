@@ -8,7 +8,7 @@
 #include "frames.h"
 #include "sound.h"
 
-void sound_thread(void* data) {
+void *sound_thread(void* data) {
     play_tuturu();
     pthread_exit(NULL);
 }
