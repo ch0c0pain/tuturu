@@ -35,7 +35,7 @@ static FLAC__StreamDecoderReadStatus readclbk(const FLAC__StreamDecoder *decoder
         buffer[i] = tuturuFlac[bufd->readPos + i];
     }
 
-    if (i != *bytes) {
+    if (i + bufd->readPos >= tuturuFlacLen) {
         *bytes = i;
         return FLAC__STREAM_DECODER_READ_STATUS_END_OF_STREAM;
     }
