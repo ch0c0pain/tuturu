@@ -1,8 +1,8 @@
 NAME := tuturu
 BUILD := build
 PREFIX :=
-CFLAGS := -g -Wall -std=gnu99 -c
-LDFLAGS := -lncurses
+CFLAGS := -g -Wall -std=c99 -pedantic -c -D_XOPEN_SOURCE=500 -D_POSIX_C_SOURCE=200112L
+LDFLAGS := -lncurses -lFLAC -lpulse-simple -lpthread
 
 SOURCES := $(wildcard src/*.c)
 OBJECTS := $(addprefix $(BUILD)/,$(notdir $(SOURCES:.c=.o)))
