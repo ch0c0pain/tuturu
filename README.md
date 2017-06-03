@@ -1,5 +1,5 @@
 # Tuturu ascii art
-
+`
                          __________
                    .ooooTOOOOOOOOOOToo..
                 _./OOOOOOOOOOOOOOOOO****\._
@@ -30,7 +30,7 @@
       V^    |:./       .|
            /./          \
            V
-
+           `
 Animates Mayuri from Steins;gate in terminal, in handmade ascii art, saying her famous "tuturu" catchphrase.
 
 The display is made through ncurses and the sound through pulseaudio.
