@@ -17,16 +17,17 @@ Rest of the code is licensed under MIT license.
 You need at least ncurses to run it properly, and optionnally flac, pthreads and pulseaudio.
 
 ### With sound support :
-
-`git clone https://github.com/ch0c0pain/tuturu`
-`cd tuturu`
-`make`
-`build/tuturu`
+```
+git clone https://github.com/ch0c0pain/tuturu
+cd tuturu
+make
+build/tuturu
+```
 
 ### Without sound support :
-
-`git clone https://github.com/ch0c0pain/tuturu`
-`cd tuturu`
-`make nosound`
-`build/tuturu`
-`
+```
+git clone https://github.com/ch0c0pain/tuturu
+cd tuturu
+make nosound
+build/tuturu
+```
