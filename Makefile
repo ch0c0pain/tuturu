@@ -1,8 +1,10 @@
 NAME := tuturu
 BUILD := build
 PREFIX :=
-CFLAGS := -g -Wall -std=c99 -pedantic -c -D_XOPEN_SOURCE=500 -D_POSIX_C_SOURCE=200112L
-LDFLAGS := -lncurses -lFLAC -lpulse-simple -lpthread
+CFLAGSSND := -g -Wall -std=c99 -pedantic -c -D_XOPEN_SOURCE=500 -D_POSIX_C_SOURCE=200112L
+CFLAGSWOSND := $(CFLAGSSND) -DNOSOUND
+LDFLAGSWOSND := -lncurses
+LDFLAGSSND := $(LDFLAGSWOSND) -lFLAC -lpulse-simple -lpthread
 
 SOURCES := $(wildcard src/*.c)
 OBJECTS := $(addprefix $(BUILD)/,$(notdir $(SOURCES:.c=.o)))
@@ -10,6 +12,14 @@ OBJECTS := $(addprefix $(BUILD)/,$(notdir $(SOURCES:.c=.o)))
 .PHONY: all
 
 all: $(BUILD) $(BUILD)/$(NAME)
+	
+all: LDFLAGS=$(LDFLAGSSND)
+all: CFLAGS=$(CFLAGSSND)
+
+nosound: $(BUILD) $(BUILD)/$(NAME)
+	
+nosound: CFLAGS=$(CFLAGSWOSND)
+nosound: LDFLAGS=$(LDFLAGSWOSND)
 
 $(BUILD):
 	mkdir -p $@

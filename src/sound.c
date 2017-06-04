@@ -1,3 +1,7 @@
+
+#ifdef NOSOUND
+#else
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <FLAC/stream_decoder.h>
@@ -49,7 +53,11 @@ static void errorclbk(const FLAC__StreamDecoder* s, FLAC__StreamDecoderErrorStat
     printf("Error decoding file\n");
 }
 
+#endif
+
 void play_tuturu() {
+#ifdef NOSOUND
+#else
     static const pa_sample_spec ss = {
         .format = PA_SAMPLE_S16NE,
         .rate = 48000,
@@ -69,4 +77,5 @@ void play_tuturu() {
 
     pa_simple_free(paServer);
     FLAC__stream_decoder_delete(stream);
+#endif
 }

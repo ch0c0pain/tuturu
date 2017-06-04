@@ -3,9 +3,12 @@
 #include <unistd.h>
 #include <ncurses.h>
 #include <sys/time.h>
-#include <pthread.h>
 
 #include "frames.h"
+
+#ifdef NOSOUND
+#else
+#include <pthread.h>
 #include "sound.h"
 
 void *sound_thread(void* data) {
@@ -13,15 +16,20 @@ void *sound_thread(void* data) {
     pthread_exit(NULL);
 }
 
+#endif
+
 int main(int argc, char** argv) {
     char** frames;
     int* delays;
     int nbFrames = load_frames(&frames, &delays);
     int i;
     struct timeval stop, start;
-    pthread_t sndThread;
 
+#ifdef NOSOUND
+#else
+    pthread_t sndThread;
     pthread_create(&sndThread, NULL, sound_thread, NULL);
+#endif
 
     initscr();
 
@@ -40,6 +48,10 @@ int main(int argc, char** argv) {
     free(delays);
     endwin();
 
+#ifdef NOSOUND
+#else
     pthread_exit(NULL);
+#endif
+
     return 0;
 }
